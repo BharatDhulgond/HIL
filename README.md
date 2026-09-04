@@ -142,7 +142,11 @@ Core/
 │   ├── test_spi.c
 │   └── test_i2c.c
 └── ai/
-|    └── ai_generated_embedded.c
+|    └── AI_Generated_Embedded_No_Bug(Baseline).c
+|     └── GPIO_bugs(variant 1).c
+|     └── SPI_bugs_no_Rx(variant 2)).c
+|     └── I2C_bus(variant 3).c
+|
 └── framework/
     └── test_runner.c
 ```
