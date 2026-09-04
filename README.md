@@ -141,7 +141,8 @@ Core/
 │   ├── test_gpio.c
 │   ├── test_spi.c
 │   └── test_i2c.c
-│
+└── ai/
+|    └── ai_generated_embedded.c
 └── framework/
     └── test_runner.c
 ```
@@ -394,36 +395,6 @@ Develop a physical prototype capable of executing automated tests against firmwa
 **4. Develop testing methodologies for AI-generated firmware**
 Use controlled faults and multiple test scenarios to evaluate whether the framework can detect functional defects in generated embedded code.
 
----
-
-## Current Status
-
-**Completed**
-- [x] STM32 Nucleo-F401RE HIL target established
-- [x] ESP32 SPI slave established
-- [x] STM32 ↔ ESP32 SPI communication verified
-- [x] Structured SPI request/response protocol implemented
-- [x] SPI checksum validation implemented
-- [x] SPI test runner implemented
-- [x] Hardware abstraction layer introduced
-- [x] Fault injection mechanism introduced
-- [x] SPI fault injection demonstrated
-- [x] GPIO test infrastructure introduced
-- [x] I2C test infrastructure introduced
-- [x] AI-generated GPIO/SPI/I2C firmware used as a System Under Test
-
-**In Progress**
-- [ ] Complete generic GPIO validation matrix
-- [ ] Complete generic I2C validation matrix
-- [ ] Expand SPI fault matrix
-- [ ] Validate disconnected/missing peripheral behavior
-- [ ] Automate firmware build/flash/test workflow
-- [ ] Evaluate multiple AI-generated firmware variants
-- [ ] Quantify fault-detection effectiveness
-- [ ] Improve diagnostic reporting
-
----
-
 ## Planned Evaluation
 
 The eventual evaluation will compare a baseline AI-generated implementation against intentionally defective implementations:
@@ -492,13 +463,11 @@ This repository contains a research prototype. The framework is intended for exp
 Future development will focus on:
 
 - Automated AI-generated firmware ingestion
-- Automated build and flashing
 - Larger firmware test suites
 - Additional peripheral interfaces
 - More sophisticated fault models
 - Public embedded firmware benchmarks
 - Quantitative comparison of different LLM-generated implementations
-- Automated test report generation
 - CI-based firmware validation
 - Expanded hardware targets
 
@@ -506,9 +475,11 @@ Future development will focus on:
 
 ## Authors
 
-**Bharat Kumar**
-Research project on Hardware-in-the-Loop validation of AI-generated embedded firmware.
+* **Bharat Kumar** 
+* **Harshit Krishna R** 
+* **Prof. Madhav Rao**
 
+> Research project on Hardware-in-the-Loop validation of AI-generated embedded firmware.
 ---
 
 ## License
